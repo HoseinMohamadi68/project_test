@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait FilterMaxTaxFreeTradeTrait
 {
-
     /**
      * Filter By Max Tax Free Trade.
      *

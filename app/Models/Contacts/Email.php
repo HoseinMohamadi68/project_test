@@ -2,7 +2,7 @@
 
 namespace App\Models\Contacts;
 
-use App\Filters\Contacts\EmailFilter;
+use App\Filters\Contacts\CourseFilter;
 use App\Interfaces\Models\Contacts\EmailInterface;
 use App\Traits\HasEmailTrait;
 use App\Models\BaseModel;
@@ -20,12 +20,12 @@ class Email extends BaseModel implements EmailInterface
     protected $fillable = [self::EMAIL];
 
     /**
-     * @param Builder     $builder Builder.
-     * @param EmailFilter $filters Filter.
+     * @param Builder      $builder Builder.
+     * @param CourseFilter $filters Filter.
      *
      * @return Builder
      */
-    public function scopeFilter(Builder $builder, EmailFilter $filters): Builder
+    public function scopeFilter(Builder $builder, CourseFilter $filters): Builder
     {
         return $filters->apply($builder);
     }

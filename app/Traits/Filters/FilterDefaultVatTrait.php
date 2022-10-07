@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait FilterDefaultVatTrait
 {
-
     /**
      * Filter By Default vat.
      *

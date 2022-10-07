@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 interface HasRatioInterface
 {
+    const RATIO = 'ratio';
+
     /**
      * @param Builder $builder Builder.
      * @param integer $ratio   Ratio.
