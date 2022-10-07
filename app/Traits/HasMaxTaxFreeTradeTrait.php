@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait HasMaxTaxFreeTradeTrait
 {
-
     /**
      * @param Builder $builder         Builder.
      * @param float   $maxTaxFreeTrade Max Tax Free Trade.

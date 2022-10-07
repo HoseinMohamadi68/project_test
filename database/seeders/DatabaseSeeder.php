@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Price\PriceType;
 use Illuminate\Database\Seeder;
 
 /**
@@ -21,14 +20,6 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(
              [
-                 LanguageSeeder::class,
-                 CurrencySeeder::class,
-                 CountrySeeder::class,
-                 UserSeeder::class,
-                 RoleSeeder::class,
-                 PermissionSeeder::class,
-                 FileSeeder::class,
-                 PaymentMethodTypeSeeder::class,
              ]
          );
     }

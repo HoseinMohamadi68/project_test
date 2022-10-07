@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 interface HasAmountInterface
 {
+    const AMOUNT = 'amount';
+
     /**
      * @param Builder $builder Builder.
      * @param integer $amount  Amount.

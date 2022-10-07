@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 trait HasPriceTypeIdTrait
 {
-
     /**
      * @param Builder $builder     Builder.
      * @param integer $priceTypeId PriceType.

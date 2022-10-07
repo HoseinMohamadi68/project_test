@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 interface HasIso2Interface
 {
-
     const ISO2 = 'iso_2';
     /**
      * @param Builder $builder Builder.

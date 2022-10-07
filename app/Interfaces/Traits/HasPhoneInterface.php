@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 interface HasPhoneInterface
 {
-
     /**
      * @param Builder $builder Builder.
      * @param string  $phone   Phone.

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait FilterMaxSmallBusinessTradeTrait
 {
-
     /**
      * Filter By Max Small Business Trade.
      *

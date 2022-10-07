@@ -6,5 +6,4 @@ use App\Interfaces\Traits\HasIdInterface;
 
 interface BaseModelInterface extends HasIdInterface
 {
-
 }

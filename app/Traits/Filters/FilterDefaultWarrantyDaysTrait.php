@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait FilterDefaultWarrantyDaysTrait
 {
-
     /**
      * Filter By Default Warranty Days.
      *
