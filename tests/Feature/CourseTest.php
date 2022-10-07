@@ -2,22 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Constants\PermissionTitle;
-use App\Models\Contacts\Email;
-use App\Models\Country\Country;
 use App\Models\Course;
-use App\Models\Currency\Currency;
-use App\Models\Language\Language;
-use App\Models\LocalizableModel;
-use App\Models\Network\Network;
-use App\Models\Translations\CountryTranslation;
-use App\Models\User\Permission;
-use App\Models\User\User;
-use Database\Factories\Language\LanguageFactory;
-use Database\Seeders\LanguageSeeder;
 use Illuminate\Http\Response;
 use Tests\TestCase;
-use function Symfony\Component\Translation\t;
 
 class CourseTest extends TestCase
 {
@@ -108,7 +95,7 @@ class CourseTest extends TestCase
     /**
      * @test
      */
-    public function testUserCanUpdateEmail()
+    public function testUserCanUpdateCourse()
     {
         $course = Course::factory()->create();
         $courseUpdate = Course::factory()->make();
@@ -164,8 +151,4 @@ class CourseTest extends TestCase
             $response->getOriginalContent()->contains(Course::AMOUNT, $secondCourse->getAmount())
         );
     }
-
-
-
-
 }

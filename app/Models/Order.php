@@ -2,51 +2,48 @@
 
 namespace App\Models;
 
-use App\Filters\Contacts\CourseFilter;
-use App\Interfaces\Models\Contacts\CourseInterface;
-use App\Traits\HasAmountTrait;
+use App\Filters\Contacts\OrderFilter;
+use App\Interfaces\Models\Contacts\OrderModelInterface;
+use App\Traits\HasDiscountTrait;
 use App\Traits\HasIdTrait;
-use App\Traits\HasRatioTrait;
-use App\Traits\HasTitleTrait;
+use App\Traits\HasTotalAmountTrait;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Course extends BaseModel implements CourseInterface
+class Order extends BaseModel implements OrderModelInterface
 {
     use HasFactory;
     use HasIdTrait;
-    use HasTitleTrait;
-    use HasAmountTrait;
-    use HasRatioTrait;
+    use HasTotalAmountTrait;
+    use HasDiscountTrait;
+
 
     /**
      * @var string[]
      */
     protected $fillable = [
         self::ID,
-        self::TITLE,
-        self::AMOUNT,
-        self::RATIO
-        ];
+        self::TOTAL_AMOUNT,
+        self::DISCOUNT,
+    ];
 
     /**
      * @param Builder      $builder Builder.
-     * @param CourseFilter $filters Filters.
+     * @param OrderFilter $filters Filters.
      *
      * @return Builder
      */
-    public function scopeFilter(Builder $builder, CourseFilter $filters): Builder
+    public function scopeFilter(Builder $builder, OrderFilter $filters): Builder
     {
         return $filters->apply($builder);
     }
-
     /**
      * Create new Object.
      *
      * @param array $attributes Attribute to create an Entity.
-     * @return CourseInterface
+     * @return OrderModelInterface
      */
-    public static function createObject(array $attributes): CourseInterface
+    public static function createObject(array $attributes): OrderModelInterface
     {
         return self::create($attributes);
     }
@@ -55,9 +52,9 @@ class Course extends BaseModel implements CourseInterface
      * Update an Object.
      *
      * @param array $attributes Attribute to update an Entity.
-     * @return CourseInterface
+     * @return OrderModelInterface
      */
-    public function updateObject(array $attributes): CourseInterface
+    public function updateObject(array $attributes): OrderModelInterface
     {
         $this->update($attributes);
 

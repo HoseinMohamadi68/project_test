@@ -8,7 +8,7 @@ trait HasPhoneTrait
 {
     /**
      * @param Builder $builder Builder.
-     * @param string  $phone   Phone.
+     * @param string  $phone   Order.
      *
      * @return Builder
      */
