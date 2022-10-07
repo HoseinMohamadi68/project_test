@@ -1,11 +1,11 @@
 <?php
 
-namespace Database\Factories\Contacts;
+namespace Database\Factories;
 
-use App\Models\Contacts\Order;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PhoneFactory extends Factory
+class OrderFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -22,8 +22,8 @@ class PhoneFactory extends Factory
     public function definition()
     {
         return [
-            Order::TYPE => $this->faker->randomElement([Order::MOBILE, Order::PHONE, Order::FAX]),
-            Order::NUMBER => $this->faker->phoneNumber
+            Order::TOTAL_AMOUNT => $this->faker->numberBetween(5000,15000),
+            Order::DISCOUNT => $this->faker->numberBetween(50,1500),
         ];
     }
 }

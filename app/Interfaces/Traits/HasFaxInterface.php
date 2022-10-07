@@ -8,7 +8,7 @@ interface HasFaxInterface
 {
     /**
      * @param Builder $builder Builder.
-     * @param string  $fax     Phone.
+     * @param string  $fax     Order.
      *
      * @return Builder
      */

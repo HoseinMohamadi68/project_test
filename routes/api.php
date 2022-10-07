@@ -16,6 +16,7 @@
 //use App\Http\Controllers\User\RoleController;
 //use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\OrderController;
 use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 
@@ -75,6 +76,7 @@ use Illuminate\Support\Facades\Route;
 //
 //
 Route::apiResource('courses', CourseController::class);
+Route::apiResource('orders', OrderController::class);
 //
 //Route::middleware(['auth:api', 'permission'])->group(function () {
 //    Route::apiResource('price-type', PriceTypeController::class);

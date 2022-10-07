@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 trait FilterPhoneTrait
 {
     /**
-     * @param string $phone Phone.
+     * @param string $phone Order.
      *
      * @return Builder
      */
