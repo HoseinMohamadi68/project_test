@@ -15,7 +15,7 @@ trait FilterOrderIdTrait
      */
     protected function orderId(int $orderId): Builder
     {
-        return $this->builder->whereOrderIdIs($orderId);
+        return $this->builder->whereOrderId($orderId);
     }
 
     /**
